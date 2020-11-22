@@ -1,13 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+body {
+  background-color: blueviolet;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.display {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  width: 375px;
+}
+
+.box {
+  border: 2px solid #333;
+  background-color: #5b1a97;
+  color: white;
+  border-radius: 4px;
+  font-size: 60px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+  font-family: "Nerko One";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.box.active {
+  opacity: 0.8;
+  transform: scale(0.98);
 }
