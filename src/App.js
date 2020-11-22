@@ -1,7 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Box from "./components/Box";
-import React, { Component } from "react";
+import DrumPad from "./components/DrumPad";
 
 const sounds = [
   {
@@ -39,8 +37,9 @@ const sounds = [
 const App = () => (
   <div className="container">
     <div id="display" className="display">
+      <h1>Hit it!</h1>
       {sounds.map((sounds, idx) => (
-        <Box text={sounds.key} key={idx} audio={sounds.sound} />
+        <DrumPad text={sounds.key} key={idx} audio={sounds.sound} />
       ))}
     </div>
   </div>
@@ -51,11 +50,11 @@ window.document.addEventListener("keydown", (e) => {
   const audio = document.getElementById(id);
 
   if (audio) {
+    audio.currentTime = 0;
+    audio.pause();
     const parent = audio.parentNode;
     parent.classList.add("active");
     audio.play();
-
-
   }
 });
 

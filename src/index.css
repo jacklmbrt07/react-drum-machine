@@ -35,3 +35,9 @@ body {
   padding: 20px;
   width: 375px;
 }
+
+.display h1 {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
