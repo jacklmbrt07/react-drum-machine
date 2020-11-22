@@ -1,0 +1,25 @@
+.box {
+  border: 2px solid #333;
+  background-color: #5b1a97;
+  color: white;
+  border-radius: 4px;
+  font-size: 60px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+  font-family: "Nerko One";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  height: 100px;
+  width: 100px;
+}
+
+.box.active {
+  opacity: 0.8;
+  transform: scale(0.98);
+}
+
+.box:hover {
+  cursor: pointer;
+}

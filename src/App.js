@@ -3,7 +3,6 @@ import "./App.css";
 import Box from "./components/Box";
 import React, { Component } from "react";
 
-
 const sounds = [
   {
     key: "Q",
@@ -46,5 +45,18 @@ const App = () => (
     </div>
   </div>
 );
+
+window.document.addEventListener("keydown", (e) => {
+  const id = e.key.toUpperCase();
+  const audio = document.getElementById(id);
+
+  if (audio) {
+    const parent = audio.parentNode;
+    parent.classList.add("active");
+    audio.play();
+
+
+  }
+});
 
 export default App;
